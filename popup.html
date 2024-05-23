@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>PhishBuster</title>
+  <style>
+    #status-table tr.failed td {
+      background-color: #ffcccc;
+    }
+
+    #status-table tr.success td {
+      background-color: #ccffcc;
+    }
+
+    #status-table td,
+    #status-table th {
+      border: 1px solid black;
+    }
+
+
+    html {
+      width: 500px;
+      /* max: 1000px */
+      height: 300px;
+      /* max: 750px */
+    }
+
+    #status-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    #status-table th {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+    }
+
+    #status-table td {
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+
+    #status-table .failed {
+      background-color: #ffdddd;
+    }
+
+    #check-me {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: #2196f3;
+      color: #fff;
+      text-align: center;
+      font-size: 16px;
+      padding: 10px 24px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #check-me:hover {
+      background-color: #0b7dda;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>PhishBuster</h1>
+  <button id="check-me">Check this page</button>
+  <table id="status-table">
+    <thead>
+      <tr>
+        <th>Check</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="status-table-body">
+    </tbody>
+  </table>
+  <script src="popup.js"></script>
+</body>
+
+</html>
